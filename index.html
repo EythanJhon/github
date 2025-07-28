@@ -1,11 +1,356 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
-</head>
-<body>
-    <h1>PORTFOLIO </h1>
-</body>
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Personal Portfolio - IT Specialist
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body class="bg-[#121212] text-[#e0e0e0] transition-colors duration-500">
+  <!-- Dark Mode Toggle -->
+  <button aria-label="Toggle Dark Mode" class="fixed top-5 right-5 z-50 p-3 rounded-full bg-gray-1000 hover:bg-gray-700 text-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" id="darkModeToggle" title="Toggle Dark Mode">
+   <i class="fas fa-moon">
+   </i>
+  </button>
+  <!-- Particle Canvas -->
+  <canvas class="fixed inset-0 -z-10" id="particleCanvas">
+  </canvas>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-md z-40">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 flex justify-between items-center h-16">
+    <a class="text-2xl font-bold tracking-wide text-white" href="#hero">
+     MyPortfolio
+    </a>
+    <ul class="hidden md:flex space-x-8 text-gray-300 font-medium tracking-wide">
+     <li>
+      <a class="hover:text-white transition-colors duration-300" href="#hero">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition-colors duration-300" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition-colors duration-300" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition-colors duration-300" href="#resume">
+       Resume
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition-colors duration-300" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button aria-label="Open Menu" class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white" id="mobileMenuButton">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Mobile Menu -->
+   <div class="hidden md:hidden bg-black bg-opacity-90 backdrop-blur-md" id="mobileMenu">
+    <ul class="flex flex-col space-y-4 p-6 text-gray-300 font-medium tracking-wide">
+     <li>
+      <a class="block hover:text-white transition-colors duration-300" href="#hero">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition-colors duration-300" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition-colors duration-300" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition-colors duration-300" href="#resume">
+       Resume
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition-colors duration-300" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative flex flex-col justify-center items-center h-screen text-center px-6 sm:px-12" id="hero">
+   <h1 aria-label="Name: ATHAN AQUINO" class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4 select-none">
+    ATHAN AQUINO
+   </h1>
+   <h2 aria-label="Role: Web Developer" class="text-2xl sm:text-3xl font-semibold text-gray-400 mb-8 typing">
+    <span class="wrap">
+    </span>
+   </h2>
+   <a class="inline-block px-8 py-3 border border-white rounded-md text-white font-semibold tracking-wide hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white" href="#projects">
+    View My Work
+   </a>
+  </section>
+  <!-- About Me Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-12 py-20 scroll-fade" id="about" tabindex="-1">
+   <h3 class="text-4xl font-bold mb-12 text-center">
+    About Me
+   </h3>
+   <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12 max-w-5xl mx-auto">
+    <img alt="Portrait of a young IT specialist with short hair wearing glasses and a black t-shirt, smiling confidently" class="rounded-lg shadow-lg w-64 h-64 object-cover mb-8 md:mb-0" height="300" loading="lazy" src="src/aj.jpg" width="300"/>
+    <div class="flex-1 space-y-6 text-gray-300">
+     <p class="text-lg leading-relaxed">
+      Hello! I'm ATHAN AQUINO, a FRESH GRADUATE AND A passionate Web Developer and IT Specialist
+        I love doing website projects and fixing Technical problem
+     </p>
+     <div>
+      <h4 class="text-2xl font-semibold mb-4">
+       Skills
+      </h4>
+      <div class="space-y-4">
+       <div>
+        <div class="flex justify-between mb-1">
+         <span>
+          HTML
+         </span>
+         <span>
+          95%
+         </span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4">
+         <div class="bg-white h-4 rounded-full transition-all duration-1000 ease-in-out" style="width: 95%">
+         </div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between mb-1">
+         <span>
+          CSS3 / Tailwind CSS
+         </span>
+         <span>
+          90%
+         </span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4">
+         <div class="bg-white h-4 rounded-full transition-all duration-1000 ease-in-out" style="width: 90%">
+         </div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between mb-1">
+         <span>
+          JavaScript
+         </span>
+         <span>
+          85%
+         </span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4">
+         <div class="bg-white h-4 rounded-full transition-all duration-1000 ease-in-out" style="width: 85%">
+         </div>
+        </div>
+       </div>
+       <div>
+       <div>
+        <div class="flex justify-between mb-1">
+         <span>
+          React
+         </span>
+         <span>
+          70%
+         </span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4">
+         <div class="bg-white h-4 rounded-full transition-all duration-1000 ease-in-out" style="width: 70%">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Projects Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-12 py-20 scroll-fade" id="projects" tabindex="-1">
+   <h3 class="text-4xl font-bold mb-12 text-center">
+    Projects
+   </h3>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Project Card 1 -->
+    <article class="bg-gray-900 rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-[1.03] transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-white" data-project='{
+          "title": "Boarding House Review Website",
+          "description": "A modern, responsive portfolio website built with PHP and JavaScript.",
+          "image": "src/2.png",
+          "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
+          "link": "https://github.com/EythanJhon/HouseHub"
+        }' tabindex="0">
+     <img alt="Screenshot of a modern portfolio website homepage with dark theme and clean layout" class="w-full h-48 object-cover" height="400" loading="lazy" src="src/1.png"" width="600"/>
+     <div class="p-6">
+      <h4 class="text-xl font-semibold mb-2">
+       HouseHub
+      </h4>
+      <p class="text-gray-400 mb-4 truncate">
+       A modern, responsive portfolio website built with Tailwind CSS and
+            vanilla JavaScript.
+      </p>
+      <div class="flex flex-wrap gap-2">
+       <span class="text-xs bg-gray-700 rounded-full px-3 py-1 font-mono">
+        HTML
+       </span>
+       <span class="text-xs bg-gray-700 rounded-full px-3 py-1 font-mono">
+        CSS
+       </span>
+       <span class="text-xs bg-gray-700 rounded-full px-3 py-1 font-mono">
+        JavaScript
+       </span>
+       <span class="text-xs bg-gray-700 rounded-full px-3 py-1 font-mono">
+        Tailwind CSS
+       </span>
+      </div>
+     </div>
+    </article>
+  </section>
+  <!-- Modal for Project Details -->
+  <div aria-hidden="true" aria-modal="true" class="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex items-center justify-center p-6 opacity-0 pointer-events-none transition-opacity duration-300 z-50" id="projectModal" role="dialog">
+   <div class="bg-[#1e1e1e] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-xl relative">
+    <button aria-label="Close Project Details" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white" id="modalCloseBtn">
+     <i class="fas fa-times fa-lg">
+     </i>
+    </button>
+    <img alt="" class="w-full h-64 object-cover rounded-t-lg" id="modalImage" loading="lazy" src=""/>
+    <div class="p-6">
+     <h4 class="text-3xl font-bold mb-4" id="modalTitle">
+     </h4>
+     <p class="text-gray-300 mb-6" id="modalDescription">
+     </p>
+     <div class="flex flex-wrap gap-3 mb-6" id="modalTech">
+     </div>
+     <a class="inline-block px-6 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-200 transition-colors duration-300" href="#" id="modalLink" rel="noopener noreferrer" target="_blank">
+      View on GitHub
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- Resume / Experience Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-12 py-20 scroll-fade" id="resume" tabindex="-1">
+   <h3 class="text-4xl font-bold mb-12 text-center">
+    Resume &amp; Experience
+   </h3>
+   <div class="max-w-4xl mx-auto relative">
+    <div class="border-l-2 border-gray-600 absolute h-full left-5 top-0">
+    </div>
+    <ul class="space-y-12 pl-12">
+     <li class="relative">
+      <div class="absolute -left-7 top-1 w-5 h-5 rounded-full bg-white border-2 border-gray-600">
+      </div>
+      <time class="text-gray-400 font-mono text-sm mb-1 block">
+       Janury 2025 - May 2025
+      </time>
+      <h4 class="text-xl font-semibold">
+       OJT IT Support and Graphics Design
+      </h4>
+      <p class="text-gray-300">
+       BROADCABLE COMMUNICATION INC.
+      </p>
+      <p class="mt-2 text-gray-400 leading-relaxed">
+       <ul>Provided hardware troubleshooting and basic network
+       support to ensure smooth daily technical operations.</ul>
+      <br>
+       <ul>Designed and managed marketing posters and social media
+       content to enhance brand visibility and engagement.</ul>
+      <br>
+       <ul>Coordinated with the marketing team to maintain consistent
+       visual branding across all digital materials</ul>
+      </p>
+     <li class="relative">
+      <div class="absolute -left-7 top-1 w-5 h-5 rounded-full bg-white border-2 border-gray-600">
+      </div>
+      <time class="text-gray-400 font-mono text-sm mb-1 block">
+       2021 - 2025
+      </time>
+      <h4 class="text-xl font-semibold">
+       Bachelor of Science in Information Technology
+      </h4>
+      <p class="text-gray-300">
+       Pampanga State Agricultural University
+      </p>
+     </li>
+    </ul>
+    <div class="text-center mt-16">
+     <a class="inline-block px-8 py-3 border border-white rounded-md text-white font-semibold tracking-wide hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white" download="RESUME_ATHANAQUINO_2.pdf" href="src/RESUME_ATHANAQUINO_2.pdf"">
+      Download Resume
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-12 py-20 scroll-fade" id="contact" tabindex="-1">
+   <h3 class="text-4xl font-bold mb-12 text-center">
+    Contact Me
+   </h3>
+   <div class="max-w-3xl mx-auto">
+    <form class="space-y-8" id="contactForm" novalidate="">
+     <div>
+      <label class="block mb-2 font-semibold text-gray-300" for="name">
+       Name
+      </label>
+      <input aria-describedby="nameError" class="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white" id="name" minlength="2" name="name" placeholder="Your full name" required="" type="text"/>
+      <p aria-live="polite" class="mt-1 text-red-500 text-sm hidden" id="nameError">
+       Please enter your name (at least 2 characters).
+      </p>
+     </div>
+     <div>
+      <label class="block mb-2 font-semibold text-gray-300" for="email">
+       Email
+      </label>
+      <input aria-describedby="emailError" class="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+      <p aria-live="polite" class="mt-1 text-red-500 text-sm hidden" id="emailError">
+       Please enter a valid email address.
+      </p>
+     </div>
+     <div>
+      <label class="block mb-2 font-semibold text-gray-300" for="message">
+       Message
+      </label>
+      <textarea aria-describedby="messageError" class="w-full rounded-md bg-gray-900 border border-gray-700 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white resize-none" id="message" minlength="10" name="message" placeholder="Your message (at least 10 characters)" required="" rows="5"></textarea>
+      <p aria-live="polite" class="mt-1 text-red-500 text-sm hidden" id="messageError">
+       Please enter a message (at least 10 characters).
+      </p>
+     </div>
+     <button class="w-full bg-white text-black font-semibold py-3 rounded-md hover:bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white" type="submit">
+      Send Message
+     </button>
+     <p aria-live="polite" class="mt-4 text-green-500 text-center font-semibold hidden" id="formSuccess">
+      Your message has been sent successfully!
+     </p>
+    </form>
+    <div class="mt-12 flex justify-center space-x-8 text-gray-400 text-2xl">
+     <a aria-label="GitHub" class="hover:text-white transition-colors duration-300" href="https://github.com/EythanJhon" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-github">
+      </i>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-white transition-colors duration-300" href="https://www.linkedin.com/in/athan-aquino/" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-linkedin">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white transition-colors duration-300" href="https://x.com/aqnoaj__" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+    </div>
+   </div>
+  </section>
+  <script src="script.js"></script>
+ </body>
 </html>
