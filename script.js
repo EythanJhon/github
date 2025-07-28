@@ -11,7 +11,7 @@
         localStorage.setItem('darkMode', 'enabled');
       } else {
         htmlEl.classList.remove('dark');
-        bodyEl.classList.remove('bg-black', 'text-white');
+        bodyEl.classList.remove('bg-black', 'text-black');
         darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('darkMode', 'disabled');
       }
@@ -92,7 +92,7 @@
     window.onload = function () {
       const elements = document.getElementsByClassName('typing');
       for (let i = 0; i < elements.length; i++) {
-        const toRotate = ['Web Developer', 'IT Specialist', 'Software Engineer'];
+        const toRotate = ['Web Developer', 'IT', 'Graphics Design', 'Hardware troubleshooting'];
         new TxtType(elements[i].getElementsByClassName('wrap')[0], toRotate, 2500);
       }
     };
